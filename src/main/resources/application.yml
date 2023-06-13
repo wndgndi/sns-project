@@ -8,11 +8,11 @@ spring.jpa:
 spring.datasource:
   hikari.maximum-pool-size: 4
   url: jdbc:postgresql://localhost:5432/sns
-  username: username
-  password: password
+  username: ${{secrets.DB_USERNAME}}
+  password: ${{secrets.DB_PASSWORD}}
   platform: postgres
   driver-class-name: org.postgresql.Driver
 
 jwt:
-  secret-key: secret-key
-  token.expired-time-ms: expired-time-ms # 30 days
+  secret-key: ${{secrets.JWT_SECRET_KEY}}
+  token.expired-time-ms: ${{secrets.JWT_EXPIRED_TIME_MS}} # 30 days

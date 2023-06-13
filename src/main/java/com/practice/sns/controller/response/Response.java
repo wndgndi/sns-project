@@ -15,7 +15,7 @@ public class Response<T> {
     }
 
     public static <T> Response <Void> success() {
-        return new Response<>("SUCCESS", null);
+        return new Response<Void>("SUCCESS", null);
     }
 
     public static <T> Response <T> success(T result) {
